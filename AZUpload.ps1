@@ -8,15 +8,15 @@ $Transcript = [System.IO.Path]::GetTempFileName()
 Start-Transcript -path $Transcript | Out-Null
 #################### Transcript Open
 
-### Main function header - Put RethinkitFunctions.psm1 in same folder as script
+### Main function header - Put ITAutomatorFunctions.psm1 in same folder as script
 $scriptFullname = $PSCommandPath ; if (!($scriptFullname)) {$scriptFullname =$MyInvocation.InvocationName }
 $scriptCSV      = $scriptFullname.Substring(0, $scriptFullname.LastIndexOf('.'))+ ".csv"  ### replace .ps1 with .csv
 $scriptDir      = Split-Path -Path $scriptFullname -Parent
 $scriptName     = Split-Path -Path $scriptFullname -Leaf
 $scriptBase     = $scriptName.Substring(0, $scriptName.LastIndexOf('.'))
 $scriptXML      = $scriptFullname.Substring(0, $scriptFullname.LastIndexOf('.'))+ ".xml"  ### replace .ps1 with .xml
-if ((Test-Path("$scriptDir\RethinkitFunctions.psm1"))) {Import-Module "$scriptDir\RethinkitFunctions.psm1" -Force} else {write-output "Err 99: Couldn't find RethinkitFunctions.psm1";Start-Sleep -Seconds 10;Exit(99)}
-# Get-Command -module RethinkitFunction  ##Shows a list of available functions
+if ((Test-Path("$scriptDir\ITAutomatorFunctions.psm1"))) {Import-Module "$scriptDir\ITAutomatorFunctions.psm1" -Force} else {write-output "Err 99: Couldn't find ITAutomatorFunctions.psm1";Start-Sleep -Seconds 10;Exit(99)}
+# Get-Command -module ITAutomatorFunction  ##Shows a list of available functions
 ############ Globals Load
 
 ########### Load From XML
