@@ -1,4 +1,6 @@
-Overview
+www.itautomator.com
+# AZUpload.ps1
+## Overview
 This .ps1 will assist with importing local PST data into Office365 mailboxes
  
 It works by bulk uploading PST files into a free ingestion folder provided by AzureAD<br>
