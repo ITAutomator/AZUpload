@@ -1,4 +1,5 @@
 www.itautomator.com
+See pricing [here](https://www.itautomator.com/pricing/)
 # AZUpload.ps1
 ## Overview
 This .ps1 will assist with importing local PST data into Office365 mailboxes
